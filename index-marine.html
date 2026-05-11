@@ -1355,7 +1355,7 @@ body{background:#f5efe3;}
   border-radius:28px!important;
 }
 .media-wordmarks{
-  grid-template-columns:repeat(5,minmax(112px,1fr))!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
 }
 @media(max-width:1024px){
   .media-grid{grid-template-columns:1fr!important;gap:38px!important}
@@ -2115,8 +2115,20 @@ body{background:#f5efe3;}
     background:linear-gradient(180deg, rgba(255,255,255,.035), rgba(6,17,34,.96))!important;
   }
 
+  .domains .domain,
+  .domains .domain.domain-featured{
+    background:linear-gradient(180deg, #10243D 0%, #07172B 100%)!important;
+    border-color:rgba(216,176,112,.3)!important;
+    box-shadow:0 24px 70px rgba(7, 23, 43, .2)!important;
+  }
+
   .domain-featured{
     background:linear-gradient(180deg, rgba(192,147,71,.13), #10243D)!important;
+  }
+
+  .domains .domain.domain-featured{
+    background:linear-gradient(180deg, rgba(192,147,71,.16), #10243D 100%)!important;
+    border-color:rgba(216,176,112,.68)!important;
   }
 
   .step .num{

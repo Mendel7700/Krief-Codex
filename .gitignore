@@ -4,3 +4,5 @@ krief-video-search.txt
 server.err.log
 server.out.log
 *.log
+maquette-*.pdf
+maquette-*.png

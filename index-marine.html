@@ -2146,7 +2146,98 @@ body{background:#f5efe3;}
   .cta-band::before{
     background:
       linear-gradient(90deg, #07172B 30%, rgba(7,23,43,.62) 70%, transparent 100%),
-      url('assets/palais-hall.jpg') center/cover no-repeat!important;
+      url('assets/couloir-palais-marine.jpg') center/cover no-repeat!important;
+  }
+}
+
+/* ========== NAVY CONSISTENCY + SCROLL PERFORMANCE ========== */
+@media (min-width: 781px){
+  .topbar,
+  .footer,
+  .section-charcoal{
+    background:#0E243D!important;
+  }
+
+  .hero,
+  .section-dark,
+  .cta-band{
+    background:#07172B!important;
+  }
+
+  .header{
+    background:rgba(10, 28, 50, .68)!important;
+    backdrop-filter:blur(10px) saturate(120%)!important;
+    -webkit-backdrop-filter:blur(10px) saturate(120%)!important;
+    box-shadow:0 12px 30px rgba(7, 23, 43, .18)!important;
+  }
+
+  .cta-urgence,
+  .media-video-poster span{
+    backdrop-filter:none!important;
+    -webkit-backdrop-filter:none!important;
+  }
+
+  .hero::before{
+    background:
+      radial-gradient(58% 78% at 78% 28%, rgba(192,147,71,.18) 0%, transparent 62%),
+      linear-gradient(180deg, rgba(7,23,43,.48) 0%, rgba(7,23,43,.92) 100%),
+      url('assets/hero-palais-marine.jpg') center/cover no-repeat!important;
+  }
+
+  .domain,
+  .domains .domain,
+  .domains .domain.domain-featured{
+    background:linear-gradient(180deg, #132A46 0%, #081B31 100%)!important;
+    border-color:rgba(216,176,112,.32)!important;
+    box-shadow:0 14px 34px rgba(7, 23, 43, .18)!important;
+  }
+
+  .domain-featured,
+  .domains .domain.domain-featured{
+    background:linear-gradient(180deg, rgba(192,147,71,.15) 0%, #132A46 42%, #081B31 100%)!important;
+    border-color:rgba(216,176,112,.68)!important;
+  }
+
+  .domain:hover{
+    transform:translateY(-3px)!important;
+  }
+
+  .pourquoi-img{
+    background:url('assets/couloir-palais-marine.jpg') center 45%/cover no-repeat, #10243D!important;
+  }
+
+  .pourquoi-img::after{
+    background:linear-gradient(90deg, transparent 0%, rgba(7,23,43,.25) 70%, #0E243D 100%)!important;
+  }
+
+  .media-video,
+  .court-shot-audience,
+  .hero-portrait .frame{
+    box-shadow:0 14px 38px rgba(7, 23, 43, .22)!important;
+  }
+
+  .media-video{
+    background:#081B31!important;
+  }
+
+  .media-video-poster{
+    background:linear-gradient(135deg,rgba(7,23,43,.62),rgba(7,23,43,.34)),url('assets/bureau-marine.jpg') center/cover no-repeat!important;
+    filter:none!important;
+  }
+
+  .about-img img,
+  .media-video-poster,
+  .court-shot-audience img,
+  .hero-portrait img{
+    filter:none!important;
+  }
+
+  .media-wordmarks{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+
+  .step .num{
+    background:#0E243D!important;
   }
 }
 </style>

@@ -6,3 +6,4 @@ server.out.log
 *.log
 maquette-*.pdf
 maquette-*.png
+backups/

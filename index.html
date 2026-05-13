@@ -63,6 +63,10 @@
   --body:'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --radius-soft:18px;
   --radius-large:24px;
+  --radius-sm:10px;
+  --radius-md:18px;
+  --radius-lg:24px;
+  --radius-pill:999px;
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
@@ -97,7 +101,7 @@ button{cursor:pointer;border:0;background:none;font:inherit}
 .topbar-left{display:flex;gap:24px;flex-wrap:wrap}
 .topbar-right{display:flex;gap:16px;align-items:center}
 .topbar-right .badge{
-  background:var(--gold);color:#fff;padding:4px 10px;border-radius:2px;font-weight:600;
+  background:var(--gold);color:#fff;padding:4px 10px;border-radius:var(--radius-pill);font-weight:600;
   letter-spacing:.06em;font-size:11px;text-transform:uppercase;
 }
 
@@ -171,9 +175,9 @@ button{cursor:pointer;border:0;background:none;font:inherit}
 .hero-content .eyebrow::before{content:"";width:32px;height:1px;background:var(--gold-bright)}
 .hero h1{
   font-family:var(--display);
-  font-size:clamp(38px, 5vw, 60px);
+  font-size:clamp(26px, 3.2vw, 40px);
   font-weight:500;
-  line-height:1.08;
+  line-height:1.1;
   letter-spacing:-.005em;
   margin-bottom:22px;
 }
@@ -188,6 +192,7 @@ button{cursor:pointer;border:0;background:none;font:inherit}
   padding:16px 28px;font-size:14px;font-weight:600;
   letter-spacing:.08em;text-transform:uppercase;
   border:1px solid var(--gold);transition:all .25s ease;
+  border-radius:var(--radius-pill);
 }
 .btn-primary{background:var(--gold);color:#fff}
 .btn-primary:hover{background:var(--gold-bright);border-color:var(--gold-bright)}
@@ -236,6 +241,7 @@ button{cursor:pointer;border:0;background:none;font:inherit}
 .trust-icon{
   width:48px;height:48px;border:1px solid var(--gold);color:var(--gold);
   display:grid;place-items:center;flex-shrink:0;
+  border-radius:var(--radius-sm);
   font-family:var(--display);font-size:22px;font-weight:600;
 }
 .trust-text strong{display:block;font-family:var(--display);font-size:20px;color:var(--text);font-weight:600;line-height:1.1}
@@ -322,7 +328,7 @@ button{cursor:pointer;border:0;background:none;font:inherit}
 .domain-icon{
   width:64px;height:64px;border:1px solid var(--gold);
   display:grid;place-items:center;color:var(--gold);
-  margin-bottom:28px;
+  margin-bottom:28px;border-radius:var(--radius-sm);
 }
 .domain-icon svg{width:32px;height:32px;stroke:var(--gold);fill:none;stroke-width:1.5}
 .domain h3{
@@ -431,6 +437,7 @@ button{cursor:pointer;border:0;background:none;font:inherit}
   padding:12px 22px;border:1px solid var(--line);
   font-size:14px;letter-spacing:.08em;text-transform:uppercase;
   color:var(--text-on-dark);font-weight:500;
+  border-radius:var(--radius-pill);
 }
 .jurisdiction strong{color:var(--gold-bright);margin-right:6px;font-family:var(--display);font-size:18px}
 
@@ -613,6 +620,7 @@ button{cursor:pointer;border:0;background:none;font:inherit}
   width:42px;height:42px;border:1px solid var(--gold);color:var(--gold);
   display:grid;place-items:center;flex-shrink:0;
   font-family:var(--display);font-size:20px;font-weight:600;
+  border-radius:var(--radius-sm);
 }
 .contact-list strong{display:block;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);margin-bottom:2px;font-weight:600}
 .contact-list a, .contact-list span{color:var(--text);font-family:var(--display);font-size:18px;font-weight:600;letter-spacing:.01em}
@@ -653,7 +661,7 @@ button{cursor:pointer;border:0;background:none;font:inherit}
   width:100%;background:var(--navy);color:#fff;
   padding:18px;font-size:14px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
   border:1px solid var(--navy);transition:all .25s ease;
-  border-radius:14px;
+  border-radius:var(--radius-pill);
 }
 .form-submit:hover{background:var(--gold);border-color:var(--gold)}
 
@@ -765,7 +773,7 @@ body{background:#f5efe3;}
   .logo-text strong{font-size:18px}
   .logo-text span{font-size:9px}
   .hero{padding:60px 0 80px}
-  .hero h1{font-size:34px}
+  .hero h1{font-size:26px}
   .hero-tel a{font-size:24px}
   .section{padding:70px 0}
   .section-head{margin-bottom:44px}
@@ -1685,7 +1693,7 @@ body{background:#f5efe3;}
 
   .hero h1{
     max-width:100%!important;
-    font-size:clamp(28px, 8vw, 32px)!important;
+    font-size:clamp(22px, 7vw, 28px)!important;
     line-height:1.12!important;
     margin-bottom:18px!important;
     overflow-wrap:normal!important;
@@ -2039,7 +2047,7 @@ body{background:#f5efe3;}
   }
 
   .hero h1{
-    font-size:28px!important;
+    font-size:23px!important;
   }
 
   .hero-tel a{
@@ -2252,8 +2260,8 @@ body{background:#f5efe3;}
       <span class="eyebrow">Cabinet Krief · Paris 8ᵉ</span>
       <h1>UNE DÉFENSE D'<em>EXIGENCE</em>,<br/>UNE PRÉSENCE SANS <em>FAILLE</em></h1>
       <p class="hero-sub">
-        Plus de 10 ans d'expérience aux côtés de particuliers et d'entreprises en
-        droit pénal, droit de la famille et droit des affaires. Une défense menée avec
+        15 ans d'expérience aux côtés de particuliers et d'entreprises en
+        droit pénal, droit de la famille, droit du travail et sécurité sociale. Une défense menée avec
         <strong style="color:#fff">réactivité, humanité et combativité</strong>.
       </p>
       <div class="hero-actions">

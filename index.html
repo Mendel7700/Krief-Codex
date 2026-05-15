@@ -8,6 +8,9 @@
 <meta name="theme-color" content="#07172B" />
 <link rel="icon" type="image/svg+xml" href="assets/logo-ak-prestige-icon.svg" />
 <link rel="canonical" href="https://kriefavocat.com/" />
+<link rel="preload" as="image" href="assets/logo-ak-navbar.webp" type="image/webp" fetchpriority="high" />
+<link rel="preload" as="image" href="assets/en-discussion-web.webp" type="image/webp" fetchpriority="high" />
+<link rel="preload" as="image" href="assets/hero-palais-marine.webp" type="image/webp" fetchpriority="high" />
 
 <!-- Open Graph -->
 <meta property="og:title" content="Maître Acher Krief — Avocat à Paris" />
@@ -163,7 +166,7 @@ button{cursor:pointer;border:0;background:none;font:inherit}
   background:
     radial-gradient(60% 80% at 80% 30%, rgba(192,147,71,.22) 0%, transparent 60%),
     linear-gradient(180deg, rgba(7,23,43,.55) 0%, rgba(7,23,43,.88) 100%),
-    url('assets/hero-palais.jpg') center/cover no-repeat;
+    image-set(url('assets/hero-palais-marine.webp') type('image/webp'), url('assets/hero-palais-marine.jpg') type('image/jpeg')) center/cover no-repeat;
   z-index:0;
 }
 .hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
@@ -2335,6 +2338,102 @@ body{background:#f5efe3;}
     font-size:16px!important;
   }
 }
+
+/* ========== EDITORIAL SECTION TRANSITIONS ========== */
+.hero::before{
+  background:
+    radial-gradient(58% 78% at 78% 28%, rgba(192,147,71,.18) 0%, transparent 62%),
+    linear-gradient(180deg, rgba(7,23,43,.48) 0%, rgba(7,23,43,.92) 100%),
+    image-set(url('assets/hero-palais-marine.webp') type('image/webp'), url('assets/hero-palais-marine.jpg') type('image/jpeg')) center/cover no-repeat!important;
+}
+
+#domaines.section-dark{
+  position:relative!important;
+  isolation:isolate!important;
+  overflow:hidden!important;
+  padding-bottom:clamp(88px,7vw,116px)!important;
+  background:
+    linear-gradient(180deg,#07172B 0%,#081B31 78%,#0B1B31 100%)!important;
+}
+
+#domaines.section-dark::after{
+  content:""!important;
+  position:absolute!important;
+  left:0!important;
+  right:0!important;
+  bottom:-1px!important;
+  height:clamp(44px,5vw,68px)!important;
+  z-index:0!important;
+  pointer-events:none!important;
+  background:
+    linear-gradient(180deg,rgba(245,239,227,0) 0%,rgba(245,239,227,.82) 58%,#f5efe3 100%)!important;
+}
+
+#domaines .container{
+  position:relative!important;
+  z-index:1!important;
+}
+
+.court-presence{
+  position:relative!important;
+  isolation:isolate!important;
+  overflow:hidden!important;
+  margin-top:clamp(-52px,-4vw,-34px)!important;
+  padding-top:clamp(104px,8vw,132px)!important;
+  padding-bottom:clamp(120px,9vw,156px)!important;
+  border-top:0!important;
+  border-bottom:0!important;
+  background:
+    linear-gradient(180deg,#07172B 0%,#0E243D 60%,#081B31 100%)!important;
+}
+
+.court-presence::before{
+  z-index:0!important;
+}
+
+.court-presence::after{
+  content:""!important;
+  position:absolute!important;
+  left:0!important;
+  right:0!important;
+  bottom:-1px!important;
+  height:clamp(68px,8vw,110px)!important;
+  z-index:0!important;
+  pointer-events:none!important;
+  background:
+    linear-gradient(180deg,rgba(245,239,227,0) 0%,rgba(245,239,227,.72) 58%,#f5efe3 100%)!important;
+}
+
+.court-presence-grid{
+  position:relative!important;
+  z-index:1!important;
+}
+
+#temoignages.section-ivory{
+  padding-top:clamp(86px,8vw,112px)!important;
+}
+
+@media (max-width:640px){
+  #domaines.section-dark{
+    padding-bottom:76px!important;
+  }
+
+  #domaines.section-dark::after{
+    height:48px!important;
+  }
+
+  .court-presence{
+    margin-top:-34px!important;
+    padding-top:92px!important;
+    padding-bottom:96px!important;
+    background:
+      linear-gradient(180deg,#07172B 0%,#0E243D 64%,#081B31 100%)!important;
+  }
+
+  .court-presence::after{
+    height:70px!important;
+  }
+}
 </style>
 </head>
 <body>
@@ -2351,7 +2450,7 @@ body{background:#f5efe3;}
 <header class="header">
   <div class="container header-inner">
     <a href="#" class="logo logo-nav" aria-label="Acher Krief Avocat à la Cour">
-      <span class="logo-mark logo-image-mark" aria-hidden="true"><img src="assets/logo-ak-navbar.png" alt=""></span>
+      <span class="logo-mark logo-image-mark" aria-hidden="true"><img src="assets/logo-ak-navbar.webp" alt="" width="406" height="331" loading="eager" fetchpriority="high" decoding="async"></span>
       <span class="logo-text">
         <strong>Acher Krief</strong>
         <span>Avocat à la Cour · Paris</span>
@@ -2392,7 +2491,10 @@ body{background:#f5efe3;}
     </div>
     <div class="hero-portrait">
       <div class="frame">
-        <img src="assets/en-discussion-web.jpg" alt="Maître Acher Krief, avocat à Paris" />
+        <picture>
+          <source srcset="assets/en-discussion-web.webp" type="image/webp">
+          <img src="assets/en-discussion-web.jpg" alt="Maître Acher Krief, avocat à Paris" width="1600" height="2396" loading="eager" fetchpriority="high" decoding="async" />
+        </picture>
       </div>
       <div class="name">Maître Acher Krief<span>Avocat fondateur</span></div>
     </div>
@@ -2918,8 +3020,3 @@ updateFloatingNavContrast();</script>
 
 </body>
 </html>
-
-
-
-
-

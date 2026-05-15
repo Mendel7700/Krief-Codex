@@ -2233,6 +2233,108 @@ body{background:#f5efe3;}
   font-size:52px!important;
   color:rgba(216,176,112,.13)!important;
 }
+
+/* ========== MENU / HERO REFINEMENTS ========== */
+.mobile-call{
+  display:none;
+}
+
+@media (min-width:1025px){
+  .header-inner{
+    gap:clamp(30px,3.4vw,58px)!important;
+  }
+
+  .nav{
+    margin-left:auto!important;
+    margin-right:auto!important;
+    gap:clamp(42px,4.4vw,72px)!important;
+    justify-content:center!important;
+  }
+}
+
+.hero{
+  padding-bottom:clamp(88px,8vw,112px)!important;
+}
+
+.trust-premium{
+  margin-top:0!important;
+  border-top:1px solid rgba(216,176,112,.16)!important;
+}
+
+.hero-tel{
+  display:none!important;
+}
+
+.hero-portrait .name{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  gap:2px!important;
+  line-height:1.08!important;
+}
+
+.hero-portrait .name span{
+  display:block!important;
+  font-family:var(--body)!important;
+  font-size:11px!important;
+  font-weight:600!important;
+  letter-spacing:.16em!important;
+  text-transform:uppercase!important;
+  color:rgba(255,255,255,.88)!important;
+}
+
+@media (max-width:640px){
+  .cta-urgence{
+    display:none!important;
+  }
+
+  .mobile-call{
+    display:grid!important;
+    place-items:center!important;
+    position:absolute!important;
+    right:58px!important;
+    top:50%!important;
+    transform:translateY(-50%)!important;
+    width:42px!important;
+    height:42px!important;
+    border:1px solid rgba(216,176,112,.28)!important;
+    border-radius:50%!important;
+    background:rgba(255,255,255,.08)!important;
+    color:var(--gold-bright)!important;
+    font-size:18px!important;
+    line-height:1!important;
+    text-decoration:none!important;
+    box-shadow:0 10px 26px rgba(0,0,0,.18)!important;
+  }
+
+  .mobile-call:hover{
+    background:rgba(192,147,71,.22)!important;
+    color:#fff!important;
+  }
+
+  .hero{
+    padding-bottom:56px!important;
+  }
+
+  .hero-portrait .name{
+    align-items:flex-start!important;
+    gap:3px!important;
+  }
+
+  .hero-portrait .name span{
+    font-size:9px!important;
+    letter-spacing:.13em!important;
+  }
+}
+
+@media (max-width:380px){
+  .mobile-call{
+    right:54px!important;
+    width:38px!important;
+    height:38px!important;
+    font-size:16px!important;
+  }
+}
 </style>
 </head>
 <body>
@@ -2264,6 +2366,9 @@ body{background:#f5efe3;}
     <a class="cta-urgence" href="tel:+33652424378">
       <span class="pulse"></span>Urgence 24h/24
     </a>
+    <a class="mobile-call" href="tel:+33652424378" aria-label="Appeler le cabinet">
+      <span aria-hidden="true">☎</span>
+    </a>
     <button class="burger" aria-label="Menu" aria-expanded="false">&#9776;</button>
   </div>
 </header>
@@ -2282,18 +2387,14 @@ body{background:#f5efe3;}
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#contact">Prendre rendez-vous</a>
-        <a class="btn btn-ghost" href="https://wa.me/33652424378" target="_blank" rel="noopener">WhatsApp direct</a>
-      </div>
-      <div class="hero-tel">
-        <span>Disponible jour et nuit</span>
-        <a href="tel:+33652424378">06 52 42 43 78</a>
+        <a class="btn btn-ghost" href="tel:+33652424378">Appeler le cabinet</a>
       </div>
     </div>
     <div class="hero-portrait">
       <div class="frame">
         <img src="assets/en-discussion-web.jpg" alt="Maître Acher Krief, avocat à Paris" />
       </div>
-      <div class="name">Maître Acher Krief</div>
+      <div class="name">Maître Acher Krief<span>Avocat fondateur</span></div>
     </div>
   </div>
 </section>
@@ -2817,8 +2918,6 @@ updateFloatingNavContrast();</script>
 
 </body>
 </html>
-
-
 
 
 
